@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Archer Trading Analytics – Forex & BTC</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <div class="max-w-5xl mx-auto px-4 py-8 space-y-10">
+
+    <header class="text-center space-y-2">
+      <h1 class="text-4xl font-bold text-teal-400">Forex & BTC Analytics</h1>
+      <p class="text-gray-400">Daily insight, strategy, and journal for smart trading</p>
+    </header>
+
+    <!-- Daily Analytics Section -->
+    <section class="bg-gray-800 p-6 rounded-xl shadow-lg space-y-3">
+      <h2 class="text-2xl font-bold">📅 Daily Analytics – <span class="text-gray-300">06 July 2025</span></h2>
+      <div class="text-gray-200 text-sm space-y-3 leading-relaxed">
+        <p><strong>Market Bias:</strong> Bullish continuation on EUR/USD. BTC ranging under resistance.</p>
+        <p><strong>Key Zones:</strong> 
+          <br>EUR/USD: 1.0780 demand zone holding.
+          <br>BTC: Watch 57,400–57,700 for liquidity sweep.
+        </p>
+        <p><strong>Trade Ideas:</strong> 
+          <br>EUR/USD NY open entry above 1.0810, target 1.0850. SL: 1.0780
+          <br>BTC scalp rejection from 57,600 with tight stop.
+        </p>
+      </div>
+    </section>
+
+    <!-- Chart/Analysis Area -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- EUR/USD Chart -->
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <h2 class="text-xl font-semibold mb-2">EUR/USD Chart</h2>
+        <div id="tradingview_eurusd" style="height: 300px;"></div>
+      </div>
+
+      <!-- BTC/USD Chart -->
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <h2 class="text-xl font-semibold mb-2">BTC/USD Chart</h2>
+        <div id="tradingview_btcusd" style="height: 300px;"></div>
+      </div>
+    </section>
+
+    <!-- TradingView Widgets Script -->
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+      new TradingView.widget({
+        "width": "100%",
+        "height": 300,
+        "symbol": "FX:EURUSD",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_top_toolbar": true,
+        "container_id": "tradingview_eurusd"
+      });
+
+      new TradingView.widget({
+        "width": "100%",
+        "height": 300,
+        "symbol": "COINBASE:BTCUSD",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_top_toolbar": true,
+        "container_id": "tradingview_btcusd"
+      });
+    </script>
+
+    <!-- Journal/Notes -->
+    <section class="bg-gray-800 p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-4">📓 Trading Journal</h2>
+      <div class="text-sm text-gray-200 space-y-3">
+        <p>✔️ July 5: Took BTC short near 58K, +2.1R</p>
+        <p>❌ July 4: EUR/USD stop out -1R. Lesson: avoid trading in chop zone.</p>
+        <p>🧠 Reminder: Stick to NY Open & confirm bias with DXY.</p>
+      </div>
+    </section>
+
+    <!-- Subscription Form -->
+<section class="bg-gray-800 p-6 rounded-xl shadow-lg space-y-3">
+  <h2 class="text-2xl font-bold">📩 Subscribe or Contact Me</h2>
+  <p class="text-gray-400 text-sm">Get daily updates or send a message.</p>
+  
+  <form id="contact-form" action="https://formspree.io/f/mzzgqyva" method="POST" class="space-y-4">
+  <input type="hidden" name="_next" value="thankyou">
+  <!-- your other form fields like email, message, etc. -->
+    <div>
+      <label class="block text-sm mb-1">Your email:</label>
+      <input type="email" name="email" required
+             class="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400"
+             placeholder="your@email.com">
+    </div>
+    
+    <div>
+      <label class="block text-sm mb-1">Your message:</label>
+      <textarea name="message" rows="4"
+                class="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400"
+                placeholder="Tell me what you'd like to receive or ask..."></textarea>
+    </div>
+
+    <button type="submit"
+            class="w-full bg-teal-500 hover:bg-teal-600 text-white p-2 rounded font-semibold">
+      Send
+    </button>
+    <p id="form-status" class="text-sm pt-2"></p>
+  </form>
+</section>
+
+    <footer class="text-center text-gray-500 text-xs mt-10">
+      &copy; 2025 Archer Trading Analytics. All rights reserved.
+    </footer>
+
+  </div>
+</body>
+</html>
