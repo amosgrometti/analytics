@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> Archer Trading Analytics – Forex & BTC</title>
+  <title> Archer Trading Analytics – Forex EUR/USD</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-800 text-white font-sans">
@@ -17,16 +17,20 @@
 
     <!-- Daily Analytics Section -->
     <section class="bg-gray-800 p-6 rounded-xl shadow-lg space-y-3">
-      <h2 class="text-2xl font-bold">📅 Daily Analytics – <span class="text-gray-300">07 July 2025</span></h2>
+      <h2 class="text-2xl font-bold">📅 Daily Analytics – <span class="text-gray-300">10 July 2025</span></h2>
       <div class="text-gray-200 text-sm space-y-3 leading-relaxed">
-        <p><strong>Market Bias:</strong> Total short bias confirmed on the 1H timeframe. Fair Value Gap (FR) confirmed the bearish sentiment. The London Open provided a clear entry opportunity toward the New York session's previous day low.</p>
+        <p><strong>Market Bias:</strong>Despite observing a strong bullish move during the Asian session, the overall market tendency remains bearish on the 1-hour timeframe. This broader context influenced today’s bias.
+Decision:
+The strategy was to look for short entries starting from the London Open (LO), aligning with the higher timeframe trend.
+Confirmation:
+A solid confirmation was received around the LO session, validating the short setup and supporting the execution of the trade in line with the dominant bearish structure. </p>
         <p><strong>Key Zones:</strong> 
           <br>EUR/USD: 1.17581 entry point for short.
-          <br>BTC: Not reviewed today.
+          <br>DXY: Not reviewed today.
         </p>
         <p><strong>Trade Ideas:</strong> 
           <br>EUR/USD Wait for London Open volatility to sweep a minor intraday high (liquidity grab or inducement). Confirm rejection with a bearish engulfing or break of structure on 5M/15M TF. Enter short after confirmation with tight SL above inducement or structure break.
-          <br>BTC did not watch
+          <br>DXY just observe. 
         </p>
       </div>
     </section>
@@ -64,20 +68,20 @@
         "container_id": "tradingview_eurusd"
       });
 
-      new TradingView.widget({
-        "width": "100%",
-        "height": 300,
-        "symbol": "COINBASE:BTCUSD",
-        "interval": "D",
-        "timezone": "Etc/UTC",
-        "theme": "dark",
-        "style": "1",
-        "locale": "en",
-        "toolbar_bg": "#f1f3f6",
-        "enable_publishing": false,
-        "hide_top_toolbar": true,
-        "container_id": "tradingview_btcusd"
-      });
+     new TradingView.widget({
+  "width": "100%",
+  "height": 300,
+  "symbol": "TVC:DXY",  // <- Changed from COINBASE:BTCUSD to TVC:DXY
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_top_toolbar": true,
+  "container_id": "tradingview_dxy"  // <- Optional: Change container ID if needed
+});
     </script>
 <!-- YouTube Video Section -->
 <div class="flex justify-center">
@@ -98,7 +102,7 @@
     <section class="bg-gray-800 p-6 rounded-xl shadow">
       <h2 class="text-2xl font-bold mb-4">📓 Trading Journal</h2>
       <div class="text-sm text-gray-200 space-y-3">
-        <p>✔️ July 7: Took EUR/USD short near 1.175, +3.1R</p>
+        <p>✔️ July 10: Took EUR/USD short, +5.1R</p>
         <p>❌ July 7: No stops</p>
         <p>🧠 Reminder: Stick to the idea have a solid direction confirmtion from previous sessions (Asia and Frakfurt). Perform in London having clear target.</p>
       </div>
